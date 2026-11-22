@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-plot_produzione.py - SLIDE 4, STEP 2: legge il CSV prodotto da scarica_entsoe.py
-e produce il grafico a 7 pannelli (generazione impilata per fonte + carico).
+plot_produzione.py - legge il carico A65 dal CSV e le serie A75 dagli XML.
+Mostra le immissioni per fonte, la produzione al netto degli assorbimenti
+degli accumuli (G - A) e il carico A65 per le sette zone.
 
-Non richiede il token ENTSO-E: lavora solo sul CSV.
+Non richiede il token ENTSO-E. Gli XML A75 sono cercati accanto al CSV,
+oppure nella cartella indicata con --a75-dir.
 
 Uso:
-  python "presentazione lunedì 23/slide_4_per_fonte/plot_produzione.py"
-  python "presentazione lunedì 23/slide_4_per_fonte/plot_produzione.py" --csv dati/carico_produzione_48h.csv
+  python slide_4_carico_production/plot_produzione.py
 """
 import argparse
 import os
@@ -19,10 +20,13 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import pandas as pd
 
+from scarica_entsoe import STORAGE_PSR_TYPES, ZONES, parse_load_or_generation
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_CSV = os.path.join(HERE, "dati", "carico_produzione_48h.csv")
 GRAFICI = os.path.join(HERE, "grafici")
-os.makedirs(GRAFICI, exist_ok=True)
+NET_COLOR = "#542477"
+NET_LABEL = f"Immissioni A75 − assorbimenti A75 ({', '.join(sorted(STORAGE_PSR_TYPES))})"
 
 try:
     from zoneinfo import ZoneInfo
@@ -31,30 +35,55 @@ except ImportError:
     ROME = None
 
 
+def read_a75(directory, zones):
+    rows = []
+    for zone in zones:
+        name = f"A75_{zone.replace(' ', '_')}.xml"
+        path = os.path.join(directory, name)
+        if not os.path.isfile(path):
+            raise SystemExit(f"XML A75 non trovato: {path}. Indica la cartella con --a75-dir.")
+        zone_rows = parse_load_or_generation(path, separate_absorption=True)
+        if not zone_rows:
+            raise SystemExit(f"Nessun dato A75 trovato in {path}.")
+        rows.extend(zone_rows)
+    data = pd.DataFrame(rows, columns=["zone", "source", "ts", "mw"])
+    data["ts"] = pd.to_datetime(data["ts"], utc=True).dt.tz_convert(ROME)
+    return data
+
+
+def read_production_and_load(csv_path, a75_dir=None):
+    if not os.path.exists(csv_path):
+        raise SystemExit(
+            "CSV non trovato: %s\nLancia prima scarica_entsoe.py (step 1) per crearlo." % csv_path
+        )
+
+    df = pd.read_csv(csv_path)
+    df["ts"] = pd.to_datetime(df["timestamp_utc"], utc=True).dt.tz_convert(ROME)
+
+    load = (df[df["source"] == "load"]
+            .pivot_table(index="ts", columns="zone", values="mw", aggfunc="mean"))
+    a75_dir = a75_dir or os.path.dirname(os.path.abspath(csv_path))
+    a75 = read_a75(a75_dir, [zone for zone in ZONES if zone in load.columns])
+    absorption = (a75[a75["source"] == "storage_absorption"]
+                  .pivot_table(index="ts", columns="zone", values="mw", aggfunc="sum"))
+    gen = a75[~a75["source"].isin(["load", "storage_absorption", "other_absorption"])].copy()
+    gen["fonte"] = gen["source"].map(lambda s: "solare" if s == "solar"
+                                     else ("eolico" if s == "wind" else "resto"))
+    gen = gen.pivot_table(index=["zone", "ts"], columns="fonte", values="mw", aggfunc="sum")
+    generation = gen.sum(axis=1, min_count=1).unstack("zone").reindex(index=load.index)
+    absorbed = absorption.reindex(index=generation.index, columns=generation.columns).fillna(0)
+    return load, gen, generation - absorbed
+
+
 def main():
-    ap = argparse.ArgumentParser(description="Grafico slide 4 da CSV (step 2)")
+    ap = argparse.ArgumentParser(description="Grafico della produzione e del carico della slide 8")
     ap.add_argument("--csv", default=DEFAULT_CSV, help="percorso del CSV tidy")
+    ap.add_argument("--a75-dir", help="cartella degli XML A75, di default accanto al CSV")
     ap.add_argument("--out", default=os.path.join(GRAFICI, "01_produzione_carico_7zone.png"),
                     help="percorso del PNG di output")
     args = ap.parse_args()
 
-    if not os.path.exists(args.csv):
-        raise SystemExit(
-            "CSV non trovato: %s\nLancia prima scarica_entsoe.py (step 1) per crearlo." % args.csv
-        )
-
-    df = pd.read_csv(args.csv)
-    df["ts"] = pd.to_datetime(df["timestamp_utc"], utc=True).dt.tz_convert(ROME)
-
-    zone_ordinate = ["IT Nord", "IT Centro-Nord", "IT Centro-Sud", "IT Sud",
-                     "IT Calabria", "IT Sicilia", "IT Sardegna"]
-
-    load = (df[df["source"] == "load"]
-            .pivot_table(index="ts", columns="zone", values="mw", aggfunc="mean"))
-    gen = df[df["source"] != "load"].copy()
-    gen["fonte"] = gen["source"].map(lambda s: "solare" if s == "solar"
-                                     else ("eolico" if s == "wind" else "resto"))
-    gen = gen.pivot_table(index=["zone", "ts"], columns="fonte", values="mw", aggfunc="sum")
+    load, gen, net_generation = read_production_and_load(args.csv, args.a75_dir)
 
     FONTE_COLORI = {"solare": "#f2c14e", "eolico": "#4c9f70", "resto": "#8d9db6"}
 
@@ -63,20 +92,17 @@ def main():
 
     fig, axes = plt.subplots(4, 2, figsize=(14, 12), dpi=150)
     fig.patch.set_facecolor("white")
-    for idx, zona in enumerate(zone_ordinate):
+    for idx, zona in enumerate(ZONES):
         r, c = divmod(idx, 2)
         ax = axes[r, c]
         ax.set_facecolor("white")
         if zona in gen.index.get_level_values(0):
-            g = gen.loc[zona]
-            g = g.reindex(load.index)
-            sol = g.get("solare", pd.Series(0, index=load.index)).fillna(0)
-            eol = g.get("eolico", pd.Series(0, index=load.index)).fillna(0)
-            rest = g.get("resto", pd.Series(0, index=load.index)).fillna(0)
-            ax.stackplot(load.index, sol.values, eol.values, rest.values,
+            g = gen.loc[zona].reindex(index=load.index, columns=list(FONTE_COLORI))
+            ax.stackplot(load.index, *g.fillna(0).to_numpy().T,
                          labels=["solare (A75)", "eolico (A75)", "resto (A75)"],
-                         colors=[FONTE_COLORI["solare"], FONTE_COLORI["eolico"],
-                                 FONTE_COLORI["resto"]], alpha=0.9)
+                         colors=list(FONTE_COLORI.values()), alpha=0.9)
+            ax.plot(load.index, net_generation[zona].values, color=NET_COLOR, lw=1.7, ls="--",
+                    label=NET_LABEL, zorder=7)
         if zona in load.columns:
             ax.plot(load.index, load[zona].values, color="black", lw=1.6,
                     label="carico (A65)", zorder=5)
@@ -110,13 +136,14 @@ def main():
                plt.Line2D([0], [0], color=FONTE_COLORI["eolico"], lw=6, label="eolico (A75)"),
                plt.Line2D([0], [0], color=FONTE_COLORI["resto"], lw=6, label="resto (A75)"),
                plt.Line2D([0], [0], color="black", lw=2, label="carico (A65)"),
+               plt.Line2D([0], [0], color=NET_COLOR, lw=2, ls="--", label=NET_LABEL),
                plt.Line2D([0], [0], marker="o", color="#c00000", lw=0, ms=5, label="ore a prezzo zero")]
     ax.legend(handles=handles, loc="upper center", fontsize=9, frameon=False,
               bbox_to_anchor=(0.5, 0.95))
     ax.text(0.98, 0.02, "Periodo: 12/11 \u2192 13/11/2026 (48h, UTC)\n"
                        "Fonte: ENTSO-E (A65+A75)\n"
                        "Punti rossi: ore a zero (Sud, Calabria, Sicilia)\n"
-                       "Dato orario, estrapolato (IT)",
+                       "Dati in MW per intervallo",
             ha="right", va="bottom", fontsize=7, color="#555555",
             transform=ax.transAxes, linespacing=1.1,
             bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="#cccccc", lw=0.6))

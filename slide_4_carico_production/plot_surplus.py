@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-plot_surplus.py - SLIDE 4: carico vs produzione fisica per zona.
+plot_surplus.py - saldo fisico per zona.
 
-Legge dati/carico_produzione_48h.csv e produce grafici/02_surplus_7zone.png:
-7 pannelli (uno per zona) con due linee:
-  - carico (nero)
-  - produzione fisica (grigio scuro, somma delle fonti)
-L'area tra le due linee e' colorata in verde (surplus, prod > carico)
-o in rosso (deficit, prod < carico), sulla finestra di 48 ore (12-13/11/2026, UTC).
+Usa le stesse serie della slide 8: carico A65 dal CSV e immissioni e
+assorbimenti dagli XML A75. Produce grafici/02_surplus_7zone.png con l'area
+tra la produzione al netto degli assorbimenti degli accumuli e il carico,
+verde per il saldo positivo e rossa per quello negativo.
 
 Uso:
   python slide_4_carico_production/plot_surplus.py
@@ -20,77 +18,58 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+from matplotlib.lines import Line2D
+from matplotlib.patches import Patch
 import pandas as pd
-import numpy as np
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_CSV = os.path.join(HERE, "dati", "carico_produzione_48h.csv")
-GRAFICI = os.path.join(HERE, "grafici")
-os.makedirs(GRAFICI, exist_ok=True)
+from plot_produzione import DEFAULT_CSV, GRAFICI, NET_COLOR, NET_LABEL, read_production_and_load
+from scarica_entsoe import ZONES
 
-try:
-    from zoneinfo import ZoneInfo
-    ROME = ZoneInfo("Europe/Rome")
-except ImportError:
-    ROME = None
+ZERO_PRICE_ZONES = ("IT Sud", "IT Calabria", "IT Sicilia")
+COMPARISON_Y_TICKS = tuple(range(0, 6001, 1000))
 
 
-def main():
-    ap = argparse.ArgumentParser(description="Carico vs produzione fisica per zona (slide 4)")
-    ap.add_argument("--csv", default=DEFAULT_CSV, help="percorso del CSV tidy")
-    ap.add_argument("--out", default=os.path.join(GRAFICI, "02_surplus_7zone.png"),
-                    help="percorso del PNG di output")
-    args = ap.parse_args()
-
-    if not os.path.exists(args.csv):
-        raise SystemExit("CSV non trovato: %s\nLancia prima scarica_entsoe.py (step 1)." % args.csv)
-
-    df = pd.read_csv(args.csv)
-    df["ts"] = pd.to_datetime(df["timestamp_utc"], utc=True)
-
-    zone_ordinate = ["IT Nord", "IT Centro-Nord", "IT Centro-Sud", "IT Sud",
-                     "IT Calabria", "IT Sicilia", "IT Sardegna"]
-
+def plot_zonal_balance(load, supply, *, zones, output, title="Saldo fisico zonale",
+                       supply_label=NET_LABEL, datasets="A65+A75",
+                       balance_caption="Saldo = immissioni − assorbimenti degli accumuli − carico",
+                       y_ticks=None, x_limits=None):
     zero_ts = pd.date_range("2026-11-13 10:00", periods=5, freq="h", tz="Europe/Rome").tz_convert("UTC")
-    zone_zero = {"IT Sud", "IT Calabria", "IT Sicilia"}
-
-    load = (df[df["source"] == "load"]
-            .pivot_table(index="ts", columns="zone", values="mw", aggfunc="mean"))
-    gen = df[df["source"] != "load"].copy()
-    gen_tot = gen.pivot_table(index="ts", columns="zone", values="mw", aggfunc="sum")
-
-    all_ts = load.index.union(gen_tot.index)
-    load = load.reindex(all_ts)
-    gen_tot = gen_tot.reindex(all_ts)
-
-    fig, axes = plt.subplots(4, 2, figsize=(14, 12), dpi=150)
+    rows = (len(zones) + 2) // 2
+    fig, axes = plt.subplots(rows, 2, figsize=(14, max(8, 3 * rows)), dpi=150, squeeze=False)
     fig.patch.set_facecolor("white")
 
-    for idx, zona in enumerate(zone_ordinate):
+    for idx, zona in enumerate(zones):
         r, c = divmod(idx, 2)
         ax = axes[r, c]
         ax.set_facecolor("white")
 
-        if zona in load.columns and zona in gen_tot.columns:
+        if zona in load.columns and zona in supply.columns:
             ts = load.index
-            l = load[zona].fillna(0).values
-            g = gen_tot[zona].fillna(0).values
-            ax.plot(ts, l, color="black", lw=1.6, label="carico", zorder=5)
-            ax.plot(ts, g, color="#555555", lw=1.6, ls="-", label="produzione fisica", zorder=5)
-            ax.fill_between(ts, g, l, where=(g >= l), color="#2e8b57", alpha=0.35,
+            demand = load[zona].to_numpy()
+            net = supply[zona].reindex(ts).to_numpy()
+            balance = net - demand
+            ax.plot(ts, demand, color="black", lw=1.6, label="Carico (A65)", zorder=5)
+            ax.plot(ts, net, color=NET_COLOR, lw=1.7, ls="--", label=supply_label, zorder=5)
+            ax.fill_between(ts, net, demand, where=(balance > 0), color="#2e8b57", alpha=0.35,
                             label="surplus", interpolate=True)
-            ax.fill_between(ts, g, l, where=(g < l), color="#c00000", alpha=0.35,
+            ax.fill_between(ts, net, demand, where=(balance < 0), color="#c00000", alpha=0.35,
                             label="deficit", interpolate=True)
 
         ax.set_title(zona.replace("IT ", ""), fontsize=11, fontweight="bold", pad=6)
         ax.set_ylabel("MW", fontsize=9)
-        ax.set_ylim(bottom=0)
-        if zona in zone_zero:
+        if y_ticks is None:
+            ax.set_ylim(bottom=min(0, ax.get_ylim()[0]))
+        else:
+            ax.set_yticks(y_ticks)
+            ax.set_ylim(y_ticks[0], y_ticks[-1])
+        if zona in ZERO_PRICE_ZONES:
             ax.scatter(zero_ts, [0] * len(zero_ts), color="#c00000", s=30,
                        zorder=6, clip_on=False, transform=ax.get_xaxis_transform())
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
         ax.margins(x=0)
+        if x_limits is not None:
+            ax.set_xlim(*x_limits)
         ax.xaxis.set_major_locator(mdates.DayLocator())
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m"))
         minor_hours = mdates.HourLocator(byhour=[0, 4, 8, 12, 16, 20])
@@ -99,7 +78,7 @@ def main():
         ax.tick_params(axis="x", which="both", labelbottom=False)
 
     # solo il pannello in basso a sinistra mostra tutte le etichette
-    ax_bl = axes[3, 0]
+    ax_bl = axes[-1, 0]
     ax_bl.tick_params(axis="x", which="both", labelbottom=True, length=3)
     for lbl in ax_bl.get_xticklabels(minor=True):
         lbl.set_fontsize(7)
@@ -107,32 +86,41 @@ def main():
         lbl.set_ha("right")
 
     # ultimo pannello: legenda + testo
-    ax = axes[3, 1]
+    ax = axes[-1, 1]
     ax.axis("off")
-    from matplotlib.lines import Line2D
-    from matplotlib.patches import Patch
-    handles = [Line2D([0], [0], color="black", lw=1.6, label="carico"),
-               Line2D([0], [0], color="#555555", lw=1.6, label="produzione fisica"),
-               Patch(facecolor="#2e8b57", alpha=0.35, label="surplus (prod > carico)"),
-               Patch(facecolor="#c00000", alpha=0.35, label="deficit (prod < carico)")]
+    handles = [Line2D([0], [0], color="black", lw=1.6, label="Carico (A65)"),
+               Line2D([0], [0], color=NET_COLOR, lw=1.7, ls="--", label=supply_label),
+               Patch(facecolor="#2e8b57", alpha=0.35, label="Surplus (saldo positivo)"),
+               Patch(facecolor="#c00000", alpha=0.35, label="Deficit (saldo negativo)"),
+               Line2D([0], [0], marker="o", color="#c00000", lw=0, ms=5, label="Ore a prezzo zero")]
     ax.legend(handles=handles, loc="upper center", fontsize=9, frameon=False,
               bbox_to_anchor=(0.5, 0.95))
     ax.text(0.98, 0.02, "Periodo: 12/11 \u2192 13/11/2026 (48h, UTC)\n"
-                       "Fonte: ENTSO-E (A65+A75)\n"
-                       "Surplus = prod - carico\n"
-                       "Dato orario, estrapolato (IT)",
+                       f"Fonte: ENTSO-E ({datasets})\n{balance_caption}",
             ha="right", va="bottom", fontsize=7, color="#555555",
             transform=ax.transAxes, linespacing=1.1,
             bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="#cccccc", lw=0.6))
-    fig.suptitle("Carico vs produzione fisica per zona \u2014 ENTSO-E \u2014 12/11 \u2192 13/11/2026 (UTC)",
+    fig.suptitle(f"{title} \u2014 ENTSO-E \u2014 12/11 \u2192 13/11/2026 (UTC)",
                  fontsize=14, fontweight="bold", y=0.995)
     fig.tight_layout(rect=[0, 0, 1, 0.985])
     fig.autofmt_xdate(rotation=30, ha="right")
 
-    os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
-    fig.savefig(args.out, dpi=160, bbox_inches="tight", facecolor="white")
+    os.makedirs(os.path.dirname(os.path.abspath(output)), exist_ok=True)
+    fig.savefig(output, dpi=160, bbox_inches="tight", facecolor="white")
     plt.close(fig)
-    print("scritto:", args.out)
+    print("scritto:", output)
+
+
+def main(*, zones=tuple(ZONES), output_name="02_surplus_7zone.png"):
+    ap = argparse.ArgumentParser(description="Saldo fisico per zona")
+    ap.add_argument("--csv", default=DEFAULT_CSV, help="percorso del CSV tidy")
+    ap.add_argument("--a75-dir", help="cartella degli XML A75, di default accanto al CSV")
+    ap.add_argument("--out", default=os.path.join(GRAFICI, output_name),
+                    help="percorso del PNG di output")
+    args = ap.parse_args()
+
+    load, _, net_generation = read_production_and_load(args.csv, args.a75_dir)
+    plot_zonal_balance(load, net_generation, zones=zones, output=args.out)
 
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@ per le 7 zone italiane da ENTSO-E Transparency Platform e costruisce il CSV tidy
 
 Fa SOLO il download (A65 load + A75 generation) e il parsing: scrive gli XML grezzi
 in dati/ e il dataset tidy dati/carico_produzione_48h.csv, poi si ferma.
-Il grafico e' prodotto dallo step 2: plot_produzione.py (legge solo il CSV).
+Il grafico e' prodotto dallo step 2: plot_produzione.py (legge CSV e XML A75).
 
 Uso (con il volume A: montato, OpenCode spento):
   python "presentazione lunedì 23/slide_4_per_fonte/scarica_entsoe.py"
@@ -18,12 +18,10 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 import pandas as pd
-import requests
 import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(HERE, "dati")
-os.makedirs(OUT_DIR, exist_ok=True)
 
 API_URL = "https://web-api.tp.entsoe.eu/api"
 try:
@@ -51,6 +49,7 @@ PSR_TO_SOURCE = {
     "B12": "hydro",
     "B04": "gas",
 }
+STORAGE_PSR_TYPES = {"B10", "B25", "B32"}
 
 
 def read_token():
@@ -166,6 +165,8 @@ def read_periods(root, value_tag):
 
 
 def download(token, params, out_path):
+    import requests
+
     query = dict(params)
     query["securityToken"] = token
     response = requests.get(API_URL, params=query, timeout=120)
@@ -183,16 +184,19 @@ def download(token, params, out_path):
     return out_path
 
 
-def parse_load_or_generation(path):
+def parse_load_or_generation(path, *, separate_absorption=False):
     root = ET.parse(path).getroot()
     rows = []
     for series in descendants(root, "TimeSeries"):
         psr = descendants(series, "psrType")
         psr_code = (psr[0].text or "").strip() if psr else ""
+        out_zone = text_of(series, "outBiddingZone_Domain.mRID")
         source = PSR_TO_SOURCE.get(psr_code, "other")
         if not psr:
             source = "load"
-        eic = (text_of(series, "outBiddingZone_Domain.mRID")
+        elif separate_absorption and out_zone:
+            source = "storage_absorption" if psr_code in STORAGE_PSR_TYPES else "other_absorption"
+        eic = (out_zone
                or text_of(series, "inBiddingZone_Domain.mRID")
                or text_of(series, "in_Domain.mRID")
                or text_of(series, "out_Domain.mRID") or "").strip()

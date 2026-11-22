@@ -1,122 +1,94 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-plot_surplus_macrozone.py - SLIDE 4: carico vs produzione per la macrozona Sud+Calabria+Sicilia.
+"""Saldo fisico di Sud, Calabria e Sicilia, prima degli scambi esterni."""
 
-Identico a 02_surplus_3zone.png ma per la zona aggregata (somma delle 3 zone).
-Un solo grafico con carico (nero) e produzione fisica (grigia), area verde/rossa.
-
-Uso:
-  python slide_4_carico_production/plot_surplus_macrozone.py
-"""
 import argparse
 import os
 
 import matplotlib
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_CSV = os.path.join(HERE, "dati", "carico_produzione_48h.csv")
-GRAFICI = os.path.join(HERE, "grafici")
-os.makedirs(GRAFICI, exist_ok=True)
-
-try:
-    from zoneinfo import ZoneInfo
-    ROME = ZoneInfo("Europe/Rome")
-except ImportError:
-    ROME = None
+from plot_produzione import DEFAULT_CSV, GRAFICI, NET_COLOR, NET_LABEL, read_production_and_load
+from plot_surplus import ZERO_PRICE_ZONES
 
 
-def main():
-    ap = argparse.ArgumentParser(description="Surplus macrozona Sud+Calabria+Sicilia (slide 4)")
-    ap.add_argument("--csv", default=DEFAULT_CSV, help="percorso del CSV tidy")
-    ap.add_argument("--out", default=os.path.join(GRAFICI, "05_surplus_macrozone.png"),
-                    help="percorso del PNG di output")
-    args = ap.parse_args()
+def read_macrozone_series(csv_path, a75_dir=None):
+    load, _, production = read_production_and_load(csv_path, a75_dir)
+    zones = list(ZERO_PRICE_ZONES)
+    macro_load = load.reindex(columns=zones).sum(axis=1, min_count=len(zones))
+    macro_production = production.reindex(columns=zones).sum(axis=1, min_count=len(zones))
+    return macro_load, macro_production
 
-    if not os.path.exists(args.csv):
-        raise SystemExit("CSV non trovato: %s\nLancia prima scarica_entsoe.py (step 1)." % args.csv)
 
-    df = pd.read_csv(args.csv)
-    df["ts"] = pd.to_datetime(df["timestamp_utc"], utc=True)
-
-    zone_macro = ["IT Sud", "IT Calabria", "IT Sicilia"]
-
-    load = (df[df["source"] == "load"]
-            .pivot_table(index="ts", columns="zone", values="mw", aggfunc="mean"))
-    gen = df[df["source"] != "load"].copy()
-    gen_tot = gen.pivot_table(index="ts", columns="zone", values="mw", aggfunc="sum")
-
-    # aggrega le 3 zone
-    load_macro = load[zone_macro].sum(axis=1)
-    gen_macro = gen_tot[zone_macro].sum(axis=1)
-
-    all_ts = load_macro.index.union(gen_macro.index)
-    load_macro = load_macro.reindex(all_ts)
-    gen_macro = gen_macro.reindex(all_ts)
-
-    ts = load_macro.index
-    l = load_macro.fillna(0).values
-    g = gen_macro.fillna(0).values
-
-    zero_ts = pd.date_range("2026-11-13 10:00", periods=5, freq="h", tz="Europe/Rome").tz_convert("UTC")
+def plot_macrozone_balance(load, supply, *, output, title, supply_label=NET_LABEL,
+                           area_labels=("Surplus", "Deficit"), scale_reference=None):
+    ts = load.index
+    demand = load.to_numpy()
+    available = supply.reindex(ts).to_numpy()
+    balance = available - demand
 
     fig, ax = plt.subplots(figsize=(14, 6), dpi=150)
     fig.patch.set_facecolor("white")
     ax.set_facecolor("white")
+    ax.plot(ts, demand, color="black", lw=1.6, label="Carico (A65)", zorder=5)
+    ax.plot(ts, available, color=NET_COLOR, lw=1.7, ls="--", label=supply_label, zorder=5)
+    ax.fill_between(ts, available, demand, where=(balance > 0), color="#2e8b57", alpha=0.35,
+                    label=area_labels[0], interpolate=True)
+    ax.fill_between(ts, available, demand, where=(balance < 0), color="#c00000", alpha=0.35,
+                    label=area_labels[1], interpolate=True)
 
-    ax.plot(ts, l, color="black", lw=1.6, label="carico (macrozona)", zorder=5)
-    ax.plot(ts, g, color="#555555", lw=1.6, ls="-", label="produzione fisica (macrozona)", zorder=5)
-    ax.fill_between(ts, g, l, where=(g >= l), color="#2e8b57", alpha=0.35,
-                    label="surplus", interpolate=True)
-    ax.fill_between(ts, g, l, where=(g < l), color="#c00000", alpha=0.35,
-                    label="deficit", interpolate=True)
+    zero_ts = pd.date_range("2026-11-13 10:00", periods=5, freq="h", tz="Europe/Rome").tz_convert("UTC")
     ax.axhline(0, color="#555555", lw=0.8, ls="--", zorder=2)
-    ax.scatter(zero_ts, [0] * len(zero_ts), color="#c00000", s=30,
+    ax.scatter(zero_ts, [0] * len(zero_ts), color="#c00000", s=30, label="Ore a prezzo zero",
                zorder=6, clip_on=False, transform=ax.get_xaxis_transform())
 
     ax.set_ylabel("MW", fontsize=9)
-    ax.set_title("Macrozona Sud + Calabria + Sicilia  -  carico vs produzione", fontsize=12,
-                 fontweight="bold", pad=6)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     ax.margins(x=0)
+    if scale_reference is not None:
+        reference_load, reference_supply = scale_reference
+        reference_index = reference_load.index
+        reference_values = pd.concat([reference_load, reference_supply.reindex(reference_index)])
+        ax.dataLim.intervaly = (min(0.0, reference_values.min()), max(0.0, reference_values.max()))
+        ax.autoscale_view(scalex=False)
+        ax.set_xlim(min(reference_index.min(), zero_ts.min()), max(reference_index.max(), zero_ts.max()))
     ax.xaxis.set_major_locator(mdates.DayLocator())
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m"))
-    minor_hours = mdates.HourLocator(byhour=[0, 4, 8, 12, 16, 20])
-    ax.xaxis.set_minor_locator(minor_hours)
+    ax.xaxis.set_minor_locator(mdates.HourLocator(byhour=[0, 4, 8, 12, 16, 20]))
     ax.xaxis.set_minor_formatter(mdates.DateFormatter("%H:%M"))
     ax.tick_params(axis="x", which="both", labelbottom=True, length=3)
-    for lbl in ax.get_xticklabels(minor=True):
-        lbl.set_fontsize(7)
-        lbl.set_rotation(45)
-        lbl.set_ha("right")
+    for label in ax.get_xticklabels(minor=True):
+        label.set_fontsize(7)
+        label.set_rotation(45)
+        label.set_ha("right")
 
-    from matplotlib.lines import Line2D
-    from matplotlib.patches import Patch
-    handles = [Line2D([0], [0], color="black", lw=1.6, label="carico"),
-               Line2D([0], [0], color="#555555", lw=1.6, label="produzione fisica"),
-               Patch(facecolor="#2e8b57", alpha=0.35, label="surplus"),
-               Patch(facecolor="#c00000", alpha=0.35, label="deficit"),
-               Line2D([0], [0], marker="o", color="#c00000", lw=0, ms=5, label="ore a prezzo zero")]
-    ax.legend(handles=handles, loc="lower right", fontsize=8, frameon=True,
+    ax.legend(loc="lower right", fontsize=8, frameon=True,
               facecolor="white", edgecolor="#cccccc")
-
-
-
-    fig.suptitle("Macrozona Sud+Calabria+Sicilia  -  carico vs produzione  -  12/11 \u2192 13/11/2026 (UTC)",
-                 fontsize=13, fontweight="bold", y=0.995)
-    fig.tight_layout(rect=[0, 0, 1, 0.985])
+    ax.set_title(f"{title}\nSud, Calabria e Sicilia · ENTSO-E · 12–13/11/2026 (UTC)",
+                 fontsize=13, fontweight="bold", pad=10)
+    fig.tight_layout()
     fig.autofmt_xdate(rotation=30, ha="right")
 
-    os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
-    fig.savefig(args.out, dpi=160, bbox_inches="tight", facecolor="white")
+    os.makedirs(os.path.dirname(os.path.abspath(output)), exist_ok=True)
+    fig.savefig(output, dpi=160, bbox_inches="tight", facecolor="white")
     plt.close(fig)
-    print("scritto:", args.out)
+    print("scritto:", output)
+
+
+def main():
+    ap = argparse.ArgumentParser(description="Saldo fisico di Sud, Calabria e Sicilia")
+    ap.add_argument("--csv", default=DEFAULT_CSV, help="percorso del CSV tidy")
+    ap.add_argument("--a75-dir", help="cartella degli XML A75, di default accanto al CSV")
+    ap.add_argument("--out", default=os.path.join(GRAFICI, "05_surplus_macrozone.png"),
+                    help="percorso del PNG di output")
+    args = ap.parse_args()
+
+    load, production = read_macrozone_series(args.csv, args.a75_dir)
+    plot_macrozone_balance(load, production, output=args.out, title="Saldo fisico prima degli scambi")
 
 
 if __name__ == "__main__":

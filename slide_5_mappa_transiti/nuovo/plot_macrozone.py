@@ -18,12 +18,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import pandas as pd
-import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_CSV = os.path.join(os.path.dirname(HERE), "dati", "transiti_48h.csv")
 GRAFICI = os.path.join(HERE, "grafici")
-os.makedirs(GRAFICI, exist_ok=True)
 
 # confini esterni della macrozona: (nome vicino, lista border out->in per export, lista border in->out per import)
 EXTERNAL = {
@@ -42,6 +40,30 @@ COLORS = {
 }
 
 
+def read_transit_csv(path):
+    if not os.path.exists(path):
+        raise SystemExit(f"CSV transiti non trovato: {path}. Esegui scarica_transiti_entsoe.py.")
+    flows = pd.read_csv(path)
+    flows["timestamp_utc"] = pd.to_datetime(flows["timestamp_utc"], utc=True)
+    return flows
+
+
+def physical_net_import(flows):
+    """Somma A11 con segno positivo in ingresso, sui soli confini esterni."""
+    signs = {}
+    for border_lists in EXTERNAL.values():
+        signs.update(dict.fromkeys(border_lists["import"], 1))
+        signs.update(dict.fromkeys(border_lists["export"], -1))
+
+    external = flows[flows["border"].isin(signs)]
+    if external.empty:
+        raise SystemExit("Nessun confine esterno della macrozona nel CSV transiti.")
+    physical = external.pivot(index="timestamp_utc", columns="border", values="flow_physical_mw")
+    return physical.mul(pd.Series(signs).reindex(physical.columns)).sum(
+        axis=1, min_count=len(physical.columns)
+    )
+
+
 def main():
     ap = argparse.ArgumentParser(description="Macrozona Sud+Calabria+Sicilia (slide 5 nuovo)")
     ap.add_argument("--csv", default=DEFAULT_CSV, help="percorso CSV transiti")
@@ -49,13 +71,8 @@ def main():
                     help="percorso PNG output")
     args = ap.parse_args()
 
-    if not os.path.exists(args.csv):
-        raise SystemExit("CSV non trovato: %s\nEsegui prima scarica_transiti_entsoe.py." % args.csv)
-
-    df = pd.read_csv(args.csv)
-    df["timestamp_utc"] = pd.to_datetime(df["timestamp_utc"], utc=True)
-
-    ts_all = sorted(df["timestamp_utc"].unique())
+    df = read_transit_csv(args.csv)
+    net_import = physical_net_import(df)
 
     fig, ax = plt.subplots(figsize=(14, 7), dpi=150)
     fig.patch.set_facecolor("white")
@@ -94,23 +111,8 @@ def main():
             ax.plot(exp_series["timestamp_utc"], exp_series["scheduled_mw"], color=color, lw=1.4,
                     ls="--", label="export verso %s (A09)" % nb, zorder=3)
 
-    # net import fisico: somma flow_physical in ingresso - uscita sui confini esterni
-    net_series = []
-    for ts in ts_all:
-        imp = 0.0
-        exp = 0.0
-        for nb, info in EXTERNAL.items():
-            for b in info["import"]:
-                sub = df[(df["border"] == b) & (df["timestamp_utc"] == ts)]
-                if not sub.empty:
-                    imp += sub["flow_physical_mw"].iloc[0]
-            for b in info["export"]:
-                sub = df[(df["border"] == b) & (df["timestamp_utc"] == ts)]
-                if not sub.empty:
-                    exp += sub["flow_physical_mw"].iloc[0]
-        net_series.append(imp - exp)
-    ax.plot(ts_all, net_series, color="black", lw=2.2, ls="-",
-            label="net import macrozona (A11)", zorder=5)
+    ax.plot(net_import.index, net_import.to_numpy(), color="black", lw=2.2, ls="-",
+            label="Import netto fisico (A11, import − export)", zorder=5)
 
     ax.axhline(0, color="#555555", lw=0.8, ls=":", zorder=2)
     ax.set_ylabel("MW", fontsize=10)
@@ -118,17 +120,16 @@ def main():
     ax.spines["right"].set_visible(False)
     ax.margins(x=0)
     ax.grid(axis="y", color="#e0e0e0", lw=0.4, alpha=0.6)
-    ax.legend(loc="upper left", fontsize=8, frameon=True, facecolor="white",
-              edgecolor="#cccccc", ncol=2)
-
     # pallini rossi sulle 5 ore a prezzo zero
     zero_ts = pd.date_range("2026-11-13 10:00", periods=5, freq="h", tz="Europe/Rome").tz_convert("UTC")
     ax.scatter(zero_ts, [0] * len(zero_ts), color="#c00000", s=40, zorder=6,
                clip_on=False, transform=ax.get_xaxis_transform(), label="ore a prezzo zero")
+    ax.legend(loc="center left", bbox_to_anchor=(0.01, 0.66), fontsize=8,
+              frameon=True, facecolor="white", edgecolor="#cccccc", ncol=2)
 
     ax.xaxis.set_major_locator(mdates.DayLocator())
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m"))
-    minor_hours = mdates.HourLocator(byhour=[0, 6, 12, 18])
+    minor_hours = mdates.HourLocator(byhour=[0, 4, 8, 12, 16, 20])
     ax.xaxis.set_minor_locator(minor_hours)
     ax.xaxis.set_minor_formatter(mdates.DateFormatter("%H:%M"))
     ax.tick_params(axis="x", which="both", labelbottom=True, length=3)
