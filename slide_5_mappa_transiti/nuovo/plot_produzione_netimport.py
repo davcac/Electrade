@@ -1,0 +1,153 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+plot_produzione_netimport.py - SLIDE 4: carico + produzione per zona con net import.
+
+Identico a 01_produzione_carico_7zone.png (stackplot per fonte + carico) ma aggiunge
+la linea nera del net import (fisico, da slide_5 transiti_48h.csv) sui pannelli
+delle 3 zone a prezzo zero (Sud, Calabria, Sicilia).
+
+Uso:
+  python slide_4_carico_production/plot_produzione_netimport.py
+"""
+import argparse
+import os
+
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import pandas as pd
+import numpy as np
+from matplotlib.patches import Patch
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+DEFAULT_CSV = os.path.join(os.path.dirname(HERE), "..", "slide_4_carico_production", "dati", "carico_produzione_48h.csv")
+TRANSITI_CSV = os.path.join(os.path.dirname(HERE), "dati", "transiti_48h.csv")
+GRAFICI = os.path.join(HERE, "grafici")
+os.makedirs(GRAFICI, exist_ok=True)
+
+try:
+    from zoneinfo import ZoneInfo
+    ROME = ZoneInfo("Europe/Rome")
+except ImportError:
+    ROME = None
+
+
+def main():
+    ap = argparse.ArgumentParser(description="Carico + produzione + net import (slide 4)")
+    ap.add_argument("--csv", default=DEFAULT_CSV, help="percorso CSV carico/produzione")
+    ap.add_argument("--transiti", default=TRANSITI_CSV, help="percorso CSV transiti slide 5")
+    ap.add_argument("--out", default=os.path.join(GRAFICI, "03_produzione_netimport_3zone.png"),
+                    help="percorso PNG output")
+    args = ap.parse_args()
+
+    if not os.path.exists(args.csv):
+        raise SystemExit("CSV non trovato: %s" % args.csv)
+
+    df = pd.read_csv(args.csv)
+    df["ts"] = pd.to_datetime(df["timestamp_utc"], utc=True)
+
+    zone_ordinate = ["IT Sud", "IT Calabria", "IT Sicilia"]
+
+    load = (df[df["source"] == "load"]
+            .pivot_table(index="ts", columns="zone", values="mw", aggfunc="mean"))
+    gen = df[df["source"] != "load"].copy()
+    gen["fonte"] = gen["source"].map(lambda s: "solare" if s == "solar"
+                                     else ("eolico" if s == "wind" else "resto"))
+    gen = gen.pivot_table(index=["zone", "ts"], columns="fonte", values="mw", aggfunc="sum")
+
+    FONTE_COLORI = {"solare": "#f2c14e", "eolico": "#4c9f70", "resto": "#8d9db6"}
+
+    # net import orario per le 3 zone a zero (da transiti_48h.csv)
+    net_import = {}
+    if os.path.exists(args.transiti):
+        tdf = pd.read_csv(args.transiti)
+        tdf["ts"] = pd.to_datetime(tdf["timestamp_utc"], utc=True)
+        for zona in ["IT Sud", "IT Calabria", "IT Sicilia"]:
+            # somma flow_physical in ingresso - uscita per ora
+            imp = tdf[tdf["in_zone"] == zona].groupby("ts")["flow_physical_mw"].sum()
+            exp = tdf[tdf["out_zone"] == zona].groupby("ts")["flow_physical_mw"].sum()
+            net = (imp - exp).reindex(load.index.union(gen_tot.index if False else load.index))
+            # reindex to load index (15 min) with forward fill
+            net = net.reindex(load.index, method="ffill")
+            net_import[zona] = net
+
+    zero_ts = pd.date_range("2026-11-13 10:00", periods=5, freq="h", tz="Europe/Rome")
+    zone_zero = {"IT Sud", "IT Calabria", "IT Sicilia"}
+
+    fig, axes = plt.subplots(2, 2, figsize=(14, 8), dpi=150)
+    fig.patch.set_facecolor("white")
+    for idx, zona in enumerate(zone_ordinate):
+        r, c = divmod(idx, 2)
+        ax = axes[r, c]
+        ax.set_facecolor("white")
+        if zona in gen.index.get_level_values(0):
+            g = gen.loc[zona]
+            g = g.reindex(load.index)
+            sol = g.get("solare", pd.Series(0, index=load.index)).fillna(0)
+            eol = g.get("eolico", pd.Series(0, index=load.index)).fillna(0)
+            rest = g.get("resto", pd.Series(0, index=load.index)).fillna(0)
+            ax.stackplot(load.index, sol.values, eol.values, rest.values,
+                         labels=["solare", "eolico", "resto (idro, gas, altro)"],
+                         colors=[FONTE_COLORI["solare"], FONTE_COLORI["eolico"],
+                                 FONTE_COLORI["resto"]], alpha=0.9)
+        if zona in load.columns:
+            ax.plot(load.index, load[zona].values, color="black", lw=1.6,
+                    label="carico", zorder=5)
+        # fascia net import (colorata) sopra il totale produzione, per le zone a zero
+        if zona in net_import:
+            totale = (sol + eol + rest).values
+            ni = net_import[zona].values
+            ax.fill_between(load.index, totale, totale + ni, color="#87ceeb", alpha=1.0,
+                            interpolate=True, linewidth=1, edgecolor="#4682b4",
+                            label="net import (fisico)", zorder=10)
+        if zona in zone_zero:
+            ax.scatter(zero_ts, [0] * len(zero_ts), color="#c00000", s=30,
+                       zorder=6, clip_on=False, transform=ax.get_xaxis_transform())
+        ax.set_title(zona.replace("IT ", ""), fontsize=11, fontweight="bold", pad=6)
+        ax.set_ylabel("MW", fontsize=9)
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        ax.margins(x=0)
+        ax.grid(False)
+        ax.xaxis.set_major_locator(mdates.DayLocator())
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m"))
+        ax.xaxis.set_minor_locator(mdates.HourLocator(byhour=[6, 12, 18]))
+        ax.tick_params(axis="x", which="both", labelbottom=False)
+
+    ax_bl = axes[1, 0]
+    ax_bl.tick_params(axis="x", which="both", labelbottom=True, length=3)
+
+    ax = axes[1, 1]
+    ax.axis("off")
+    handles = [plt.Line2D([0], [0], color=FONTE_COLORI["solare"], lw=6, label="solare"),
+               plt.Line2D([0], [0], color=FONTE_COLORI["eolico"], lw=6, label="eolico"),
+               plt.Line2D([0], [0], color=FONTE_COLORI["resto"], lw=6, label="resto (idro, gas, altro)"),
+               plt.Line2D([0], [0], color="black", lw=2, label="carico"),
+               Patch(facecolor="#87ceeb", alpha=0.9, label="net import (fisico)"),
+               plt.Line2D([0], [0], marker="o", color="#c00000", lw=0, ms=5, label="ore a prezzo zero")]
+    ax.legend(handles=handles, loc="upper center", fontsize=9, frameon=False,
+              bbox_to_anchor=(0.5, 0.98))
+    ax.text(0.98, 0.02, "Periodo: 12/11->13/11/2026 (48h, UTC)\n"
+                       "Fonte: ENTSO-E (A65+A75)\n"
+                       "Punti rossi: ore a zero (Sud, Calabria, Sicilia)\n"
+                       "Net import: flusso fisico (slide 5)\n"
+                       "Dato orario, estrapolato (IT)",
+            ha="right", va="bottom", fontsize=7, color="#555555",
+            transform=ax.transAxes, linespacing=1.1,
+            bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="#cccccc", lw=0.6))
+
+    fig.suptitle("Carico e produzione fisica per zona \\u2014 ENTSO-E \\u2014 12/11 \\u2192 13/11/2026 (UTC)",
+                 fontsize=14, fontweight="bold", y=0.995)
+    fig.tight_layout(rect=[0, 0, 1, 0.985])
+    fig.autofmt_xdate(rotation=30, ha="right")
+
+    os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
+    fig.savefig(args.out, dpi=160, bbox_inches="tight", facecolor="white")
+    plt.close(fig)
+    print("scritto:", args.out)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Publication_MarketDocument xmlns="urn:iec62325.351:tc57wg16:451-3:publicationdocument:7:0">
+  <mRID>8962d7f61f68470e9a51e058c6fc3452</mRID>
+  <revisionNumber>1</revisionNumber>
+  <type>A11</type>
+  <sender_MarketParticipant.mRID codingScheme="A01">10X1001A1001A450</sender_MarketParticipant.mRID>
+  <sender_MarketParticipant.marketRole.type>A32</sender_MarketParticipant.marketRole.type>
+  <receiver_MarketParticipant.mRID codingScheme="A01">10X1001A1001A450</receiver_MarketParticipant.mRID>
+  <receiver_MarketParticipant.marketRole.type>A33</receiver_MarketParticipant.marketRole.type>
+  <createdDateTime>2026-11-18T16:45:02Z</createdDateTime>
+  <period.timeInterval>
+    <start>2026-11-11T23:00Z</start>
+    <end>2026-11-13T23:00Z</end>
+  </period.timeInterval>
+    <TimeSeries>
+      <mRID>1</mRID>
+      <businessType>A66</businessType>
+      <in_Domain.mRID codingScheme="A01">10YGR-HTSO-----Y</in_Domain.mRID>
+      <out_Domain.mRID codingScheme="A01">10Y1001A1001A788</out_Domain.mRID>
+      <quantity_Measure_Unit.name>MAW</quantity_Measure_Unit.name>
+      <curveType>A03</curveType>
+        <Period>
+          <timeInterval>
+            <start>2026-11-11T23:00Z</start>
+            <end>2026-11-13T23:00Z</end>
+          </timeInterval>
+          <resolution>PT60M</resolution>
+            <Point>
+              <position>1</position>
+              <quantity>0</quantity>
+            </Point>
+            <Point>
+              <position>34</position>
+              <quantity>110</quantity>
+            </Point>
+            <Point>
+              <position>35</position>
+              <quantity>0</quantity>
+            </Point>
+            <Point>
+              <position>37</position>
+              <quantity>153</quantity>
+            </Point>
+            <Point>
+              <position>38</position>
+              <quantity>258</quantity>
+            </Point>
+            <Point>
+              <position>40</position>
+              <quantity>257</quantity>
+            </Point>
+            <Point>
+              <position>41</position>
+              <quantity>0</quantity>
+            </Point>
+        </Period>
+    </TimeSeries>
+</Publication_MarketDocument>

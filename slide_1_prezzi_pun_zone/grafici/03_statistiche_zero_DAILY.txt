@@ -1,0 +1,20 @@
+STATISTICHE SLIDE 1 - prezzi GIORNALIERI MGP 01/01/2026 -> 15/11/2026
+======================================================================
+righe: 319   periodo: 2026-01-01 -> 2026-11-15
+
+per zona: n.giorni, min, max, media, giorni con prezzo <= 0, <= 20, <= 50
+  Nord           :  319 gg, min=   82.74, max=  320.52, media=  160.38, <=0=  0, <=20=  0, <=50=  0
+  Centro Nord    :  319 gg, min=   82.74, max=  320.52, media=  160.96, <=0=  0, <=20=  0, <=50=  0
+  Centro Sud     :  319 gg, min=   79.98, max=  303.83, media=  158.07, <=0=  0, <=20=  0, <=50=  0
+  Sud            :  319 gg, min=   76.06, max=  303.83, media=  153.72, <=0=  0, <=20=  0, <=50=  0
+  Calabria       :  319 gg, min=   76.06, max=  280.15, media=  153.26, <=0=  0, <=20=  0, <=50=  0
+  Sicilia        :  319 gg, min=   72.47, max=  290.86, media=  160.13, <=0=  0, <=20=  0, <=50=  0
+  Sardegna       :  319 gg, min=   51.81, max=  292.50, media=  151.26, <=0=  0, <=20=  0, <=50=  0
+  PUN Index GME  :  319 gg, min=   82.62, max=  313.51, media=  159.36, <=0=  0, <=20=  0, <=50=  0
+
+confronto PUN Index GME vs colonna 'Italia' del file zonale (sanity check)
+  righe confrontate: 319  differenza massima: 0.0000  media: 0.0000
+
+NOTA: il prezzo giornaliero e' la media del giorno. I giorni a prezzo
+esattamente zero non esistono sulla media (le ore a zero si contano
+sui dati orari: vedi grafici/01_serie_prezzi_mgp.png).

@@ -1,0 +1,54 @@
+STATISTICHE SLIDE 1 - prezzi MGP 01/01/2026 -> 15/11/2026
+======================================================================
+righe: 7656   periodo: 2026-01-01 00:00:00+01:00 -> 2026-11-15 23:00:00+01:00
+
+per zona: n.osservazioni, ore a prezzo 0, ore negative, min, max, media
+  Nord           :   7656 oss, zero=  14, negative=   0, min=    0.00, max=  427.00, media=  160.40
+  Centro Nord    :   7656 oss, zero=  14, negative=   0, min=    0.00, max=  427.00, media=  160.97
+  Centro Sud     :   7656 oss, zero=  69, negative=   0, min=    0.00, max=  427.00, media=  158.08
+  Sud            :   7656 oss, zero= 177, negative=   4, min=   -0.01, max=  427.00, media=  153.74
+  Calabria       :   7656 oss, zero= 178, negative=   4, min=   -0.01, max=  399.17, media=  153.27
+  Sicilia        :   7656 oss, zero= 180, negative=   4, min=   -0.01, max=  414.00, media=  160.15
+  Sardegna       :   7656 oss, zero=  91, negative=   6, min=   -2.03, max=  427.00, media=  151.26
+  PUN Index GME  :   7656 oss, zero=  14, negative=   0, min=    0.00, max=  420.87, media=  159.38
+
+sequenze consecutive di ore a prezzo zero (solo >= 3 ore)
+  Nord           : 2 sequenze, la piu' lunga 5 ore (dal 01/05/2026 10:00)
+      01/05 10:00 -> 01/05 14:00  (5 ore, min=0.00)
+      02/05 12:00 -> 02/05 14:00  (3 ore, min=0.00)
+  Centro Nord    : 2 sequenze, la piu' lunga 5 ore (dal 01/05/2026 10:00)
+      01/05 10:00 -> 01/05 14:00  (5 ore, min=0.00)
+      02/05 12:00 -> 02/05 14:00  (3 ore, min=0.00)
+  Centro Sud     : 11 sequenze, la piu' lunga 8 ore (dal 12/05/2026 09:00)
+      12/05 09:00 -> 12/05 16:00  (8 ore, min=0.00)
+      01/05 10:00 -> 01/05 16:00  (7 ore, min=0.00)
+      02/05 10:00 -> 02/05 15:00  (6 ore, min=0.00)
+      16/05 11:00 -> 16/05 16:00  (6 ore, min=0.00)
+      23/05 10:00 -> 23/05 15:00  (6 ore, min=0.00)
+  Sud            : 26 sequenze, la piu' lunga 9 ore (dal 12/05/2026 09:00)
+      12/05 09:00 -> 12/05 17:00  (9 ore, min=0.00)
+      21/05 09:00 -> 21/05 16:00  (8 ore, min=0.00)
+      22/05 09:00 -> 22/05 16:00  (8 ore, min=0.00)
+      12/06 09:00 -> 12/06 16:00  (8 ore, min=0.00)
+      14/10 09:00 -> 14/10 16:00  (8 ore, min=-0.01)
+  Calabria       : 26 sequenze, la piu' lunga 9 ore (dal 12/05/2026 09:00)
+      12/05 09:00 -> 12/05 17:00  (9 ore, min=0.00)
+      21/05 09:00 -> 21/05 16:00  (8 ore, min=0.00)
+      22/05 09:00 -> 22/05 16:00  (8 ore, min=0.00)
+      12/06 09:00 -> 12/06 16:00  (8 ore, min=0.00)
+      14/10 09:00 -> 14/10 16:00  (8 ore, min=-0.01)
+  Sicilia        : 26 sequenze, la piu' lunga 9 ore (dal 12/05/2026 09:00)
+      12/05 09:00 -> 12/05 17:00  (9 ore, min=0.00)
+      21/05 09:00 -> 21/05 16:00  (8 ore, min=0.00)
+      22/05 09:00 -> 22/05 16:00  (8 ore, min=0.00)
+      12/06 09:00 -> 12/06 16:00  (8 ore, min=0.00)
+      14/10 09:00 -> 14/10 16:00  (8 ore, min=-0.01)
+  Sardegna       : 12 sequenze, la piu' lunga 8 ore (dal 12/05/2026 09:00)
+      12/05 09:00 -> 12/05 16:00  (8 ore, min=0.00)
+      01/05 10:00 -> 01/05 16:00  (7 ore, min=0.00)
+      16/05 11:00 -> 16/05 17:00  (7 ore, min=0.00)
+      02/05 10:00 -> 02/05 15:00  (6 ore, min=0.00)
+      23/05 10:00 -> 23/05 15:00  (6 ore, min=0.00)
+
+confronto PUN Index GME vs colonna 'Italia' del file zonale (sanity check)
+  righe confrontate: 7656  differenza massima: 0.0000  media: 0.0000

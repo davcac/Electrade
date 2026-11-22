@@ -1,0 +1,577 @@
+border,out_zone,in_zone,timestamp_utc,timestamp_local,limite_mw
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-11 23:00:00,2026-11-12 00:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 00:00:00,2026-11-12 01:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 01:00:00,2026-11-12 02:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 02:00:00,2026-11-12 03:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 03:00:00,2026-11-12 04:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 04:00:00,2026-11-12 05:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 05:00:00,2026-11-12 06:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 06:00:00,2026-11-12 07:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 07:00:00,2026-11-12 08:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 08:00:00,2026-11-12 09:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 09:00:00,2026-11-12 10:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 10:00:00,2026-11-12 11:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 11:00:00,2026-11-12 12:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 12:00:00,2026-11-12 13:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 13:00:00,2026-11-12 14:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 14:00:00,2026-11-12 15:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 15:00:00,2026-11-12 16:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 16:00:00,2026-11-12 17:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 17:00:00,2026-11-12 18:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 18:00:00,2026-11-12 19:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 19:00:00,2026-11-12 20:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 20:00:00,2026-11-12 21:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 21:00:00,2026-11-12 22:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 22:00:00,2026-11-12 23:00:00,0.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-12 23:00:00,2026-11-13 00:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 00:00:00,2026-11-13 01:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 01:00:00,2026-11-13 02:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 02:00:00,2026-11-13 03:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 03:00:00,2026-11-13 04:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 04:00:00,2026-11-13 05:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 05:00:00,2026-11-13 06:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 06:00:00,2026-11-13 07:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 07:00:00,2026-11-13 08:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 08:00:00,2026-11-13 09:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 09:00:00,2026-11-13 10:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 10:00:00,2026-11-13 11:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 11:00:00,2026-11-13 12:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 12:00:00,2026-11-13 13:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 13:00:00,2026-11-13 14:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 14:00:00,2026-11-13 15:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 15:00:00,2026-11-13 16:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 16:00:00,2026-11-13 17:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 17:00:00,2026-11-13 18:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 18:00:00,2026-11-13 19:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 19:00:00,2026-11-13 20:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 20:00:00,2026-11-13 21:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 21:00:00,2026-11-13 22:00:00,250.0
+Grecia (XGRE) -> IT Sud,Grecia (XGRE),IT Sud,2026-11-13 22:00:00,2026-11-13 23:00:00,250.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-11 23:00:00,2026-11-12 00:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 00:00:00,2026-11-12 01:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 01:00:00,2026-11-12 02:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 02:00:00,2026-11-12 03:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 03:00:00,2026-11-12 04:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 04:00:00,2026-11-12 05:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 05:00:00,2026-11-12 06:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 06:00:00,2026-11-12 07:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 07:00:00,2026-11-12 08:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 08:00:00,2026-11-12 09:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 09:00:00,2026-11-12 10:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 10:00:00,2026-11-12 11:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 11:00:00,2026-11-12 12:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 12:00:00,2026-11-12 13:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 13:00:00,2026-11-12 14:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 14:00:00,2026-11-12 15:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 15:00:00,2026-11-12 16:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 16:00:00,2026-11-12 17:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 17:00:00,2026-11-12 18:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 18:00:00,2026-11-12 19:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 19:00:00,2026-11-12 20:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 20:00:00,2026-11-12 21:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 21:00:00,2026-11-12 22:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 22:00:00,2026-11-12 23:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-12 23:00:00,2026-11-13 00:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 00:00:00,2026-11-13 01:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 01:00:00,2026-11-13 02:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 02:00:00,2026-11-13 03:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 03:00:00,2026-11-13 04:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 04:00:00,2026-11-13 05:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 05:00:00,2026-11-13 06:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 06:00:00,2026-11-13 07:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 07:00:00,2026-11-13 08:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 08:00:00,2026-11-13 09:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 09:00:00,2026-11-13 10:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 10:00:00,2026-11-13 11:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 11:00:00,2026-11-13 12:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 12:00:00,2026-11-13 13:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 13:00:00,2026-11-13 14:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 14:00:00,2026-11-13 15:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 15:00:00,2026-11-13 16:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 16:00:00,2026-11-13 17:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 17:00:00,2026-11-13 18:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 18:00:00,2026-11-13 19:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 19:00:00,2026-11-13 20:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 20:00:00,2026-11-13 21:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 21:00:00,2026-11-13 22:00:00,10000.0
+Grecia -> IT Sud,Grecia,IT Sud,2026-11-13 22:00:00,2026-11-13 23:00:00,10000.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-11 23:00:00,2026-11-12 00:00:00,1672.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 00:00:00,2026-11-12 01:00:00,1672.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 01:00:00,2026-11-12 02:00:00,1653.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 02:00:00,2026-11-12 03:00:00,1653.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 03:00:00,2026-11-12 04:00:00,1668.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 04:00:00,2026-11-12 05:00:00,1668.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 05:00:00,2026-11-12 06:00:00,1678.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 06:00:00,2026-11-12 07:00:00,1678.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 07:00:00,2026-11-12 08:00:00,1686.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 08:00:00,2026-11-12 09:00:00,1686.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 09:00:00,2026-11-12 10:00:00,1689.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 10:00:00,2026-11-12 11:00:00,1689.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 11:00:00,2026-11-12 12:00:00,1689.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 12:00:00,2026-11-12 13:00:00,1689.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 13:00:00,2026-11-12 14:00:00,1688.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 14:00:00,2026-11-12 15:00:00,1688.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 15:00:00,2026-11-12 16:00:00,1688.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 16:00:00,2026-11-12 17:00:00,1699.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 17:00:00,2026-11-12 18:00:00,1699.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 18:00:00,2026-11-12 19:00:00,1685.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 19:00:00,2026-11-12 20:00:00,1676.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 20:00:00,2026-11-12 21:00:00,1676.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 21:00:00,2026-11-12 22:00:00,1672.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 22:00:00,2026-11-12 23:00:00,1672.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-12 23:00:00,2026-11-13 00:00:00,1655.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 00:00:00,2026-11-13 01:00:00,1655.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 01:00:00,2026-11-13 02:00:00,1681.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 02:00:00,2026-11-13 03:00:00,1681.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 03:00:00,2026-11-13 04:00:00,1681.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 04:00:00,2026-11-13 05:00:00,1681.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 05:00:00,2026-11-13 06:00:00,1678.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 06:00:00,2026-11-13 07:00:00,1678.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 07:00:00,2026-11-13 08:00:00,1692.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 08:00:00,2026-11-13 09:00:00,1692.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 09:00:00,2026-11-13 10:00:00,1673.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 10:00:00,2026-11-13 11:00:00,1673.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 11:00:00,2026-11-13 12:00:00,1689.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 12:00:00,2026-11-13 13:00:00,1689.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 13:00:00,2026-11-13 14:00:00,1697.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 14:00:00,2026-11-13 15:00:00,1697.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 15:00:00,2026-11-13 16:00:00,1681.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 16:00:00,2026-11-13 17:00:00,1681.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 17:00:00,2026-11-13 18:00:00,1694.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 18:00:00,2026-11-13 19:00:00,1694.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 19:00:00,2026-11-13 20:00:00,1687.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 20:00:00,2026-11-13 21:00:00,1687.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 21:00:00,2026-11-13 22:00:00,1676.0
+IT Calabria -> IT Sicilia,IT Calabria,IT Sicilia,2026-11-13 22:00:00,2026-11-13 23:00:00,1676.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-11 23:00:00,2026-11-12 00:00:00,1876.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 00:00:00,2026-11-12 01:00:00,1876.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 01:00:00,2026-11-12 02:00:00,1874.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 02:00:00,2026-11-12 03:00:00,1874.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 03:00:00,2026-11-12 04:00:00,1836.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 04:00:00,2026-11-12 05:00:00,1836.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 05:00:00,2026-11-12 06:00:00,1788.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 06:00:00,2026-11-12 07:00:00,1788.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 07:00:00,2026-11-12 08:00:00,1788.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 08:00:00,2026-11-12 09:00:00,1788.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 09:00:00,2026-11-12 10:00:00,1827.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 10:00:00,2026-11-12 11:00:00,1827.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 11:00:00,2026-11-12 12:00:00,1825.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 12:00:00,2026-11-12 13:00:00,1825.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 13:00:00,2026-11-12 14:00:00,1811.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 14:00:00,2026-11-12 15:00:00,1811.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 15:00:00,2026-11-12 16:00:00,1811.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 16:00:00,2026-11-12 17:00:00,1723.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 17:00:00,2026-11-12 18:00:00,1723.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 18:00:00,2026-11-12 19:00:00,1728.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 19:00:00,2026-11-12 20:00:00,1742.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 20:00:00,2026-11-12 21:00:00,1742.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 21:00:00,2026-11-12 22:00:00,1737.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 22:00:00,2026-11-12 23:00:00,1737.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-12 23:00:00,2026-11-13 00:00:00,1736.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 00:00:00,2026-11-13 01:00:00,1736.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 01:00:00,2026-11-13 02:00:00,1766.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 02:00:00,2026-11-13 03:00:00,1766.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 03:00:00,2026-11-13 04:00:00,1787.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 04:00:00,2026-11-13 05:00:00,1787.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 05:00:00,2026-11-13 06:00:00,1794.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 06:00:00,2026-11-13 07:00:00,1794.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 07:00:00,2026-11-13 08:00:00,1842.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 08:00:00,2026-11-13 09:00:00,1842.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 09:00:00,2026-11-13 10:00:00,1673.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 10:00:00,2026-11-13 11:00:00,1673.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 11:00:00,2026-11-13 12:00:00,1767.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 12:00:00,2026-11-13 13:00:00,1767.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 13:00:00,2026-11-13 14:00:00,1841.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 14:00:00,2026-11-13 15:00:00,1841.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 15:00:00,2026-11-13 16:00:00,1726.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 16:00:00,2026-11-13 17:00:00,1726.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 17:00:00,2026-11-13 18:00:00,1737.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 18:00:00,2026-11-13 19:00:00,1737.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 19:00:00,2026-11-13 20:00:00,1739.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 20:00:00,2026-11-13 21:00:00,1739.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 21:00:00,2026-11-13 22:00:00,1772.0
+IT Calabria -> IT Sud,IT Calabria,IT Sud,2026-11-13 22:00:00,2026-11-13 23:00:00,1772.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-11 23:00:00,2026-11-12 00:00:00,3603.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 00:00:00,2026-11-12 01:00:00,3603.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 01:00:00,2026-11-12 02:00:00,3604.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 02:00:00,2026-11-12 03:00:00,3604.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 03:00:00,2026-11-12 04:00:00,3823.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 04:00:00,2026-11-12 05:00:00,3823.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 05:00:00,2026-11-12 06:00:00,4096.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 06:00:00,2026-11-12 07:00:00,4096.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 07:00:00,2026-11-12 08:00:00,3604.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 08:00:00,2026-11-12 09:00:00,3604.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 09:00:00,2026-11-12 10:00:00,3957.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 10:00:00,2026-11-12 11:00:00,3957.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 11:00:00,2026-11-12 12:00:00,4241.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 12:00:00,2026-11-12 13:00:00,4241.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 13:00:00,2026-11-12 14:00:00,4057.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 14:00:00,2026-11-12 15:00:00,4057.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 15:00:00,2026-11-12 16:00:00,4057.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 16:00:00,2026-11-12 17:00:00,4149.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 17:00:00,2026-11-12 18:00:00,4149.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 18:00:00,2026-11-12 19:00:00,4226.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 19:00:00,2026-11-12 20:00:00,4226.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 20:00:00,2026-11-12 21:00:00,4226.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 21:00:00,2026-11-12 22:00:00,4551.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 22:00:00,2026-11-12 23:00:00,4551.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-12 23:00:00,2026-11-13 00:00:00,4267.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 00:00:00,2026-11-13 01:00:00,4267.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 01:00:00,2026-11-13 02:00:00,4385.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 02:00:00,2026-11-13 03:00:00,4385.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 03:00:00,2026-11-13 04:00:00,4302.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 04:00:00,2026-11-13 05:00:00,4302.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 05:00:00,2026-11-13 06:00:00,4391.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 06:00:00,2026-11-13 07:00:00,4391.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 07:00:00,2026-11-13 08:00:00,4417.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 08:00:00,2026-11-13 09:00:00,4417.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 09:00:00,2026-11-13 10:00:00,4677.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 10:00:00,2026-11-13 11:00:00,4677.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 11:00:00,2026-11-13 12:00:00,4511.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 12:00:00,2026-11-13 13:00:00,4511.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 13:00:00,2026-11-13 14:00:00,3836.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 14:00:00,2026-11-13 15:00:00,3836.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 15:00:00,2026-11-13 16:00:00,4343.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 16:00:00,2026-11-13 17:00:00,4343.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 17:00:00,2026-11-13 18:00:00,4275.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 18:00:00,2026-11-13 19:00:00,4275.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 19:00:00,2026-11-13 20:00:00,4423.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 20:00:00,2026-11-13 21:00:00,4423.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 21:00:00,2026-11-13 22:00:00,4462.0
+IT Centro-Sud -> IT Sud,IT Centro-Sud,IT Sud,2026-11-13 22:00:00,2026-11-13 23:00:00,4462.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-11 23:00:00,2026-11-12 00:00:00,1438.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 00:00:00,2026-11-12 01:00:00,1438.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 01:00:00,2026-11-12 02:00:00,1319.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 02:00:00,2026-11-12 03:00:00,1319.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 03:00:00,2026-11-12 04:00:00,1534.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 04:00:00,2026-11-12 05:00:00,1534.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 05:00:00,2026-11-12 06:00:00,1534.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 06:00:00,2026-11-12 07:00:00,1534.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 07:00:00,2026-11-12 08:00:00,1307.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 08:00:00,2026-11-12 09:00:00,1307.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 09:00:00,2026-11-12 10:00:00,1687.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 10:00:00,2026-11-12 11:00:00,1687.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 11:00:00,2026-11-12 12:00:00,1639.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 12:00:00,2026-11-12 13:00:00,1639.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 13:00:00,2026-11-12 14:00:00,1665.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 14:00:00,2026-11-12 15:00:00,1665.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 15:00:00,2026-11-12 16:00:00,1665.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 16:00:00,2026-11-12 17:00:00,1517.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 17:00:00,2026-11-12 18:00:00,1517.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 18:00:00,2026-11-12 19:00:00,1496.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 19:00:00,2026-11-12 20:00:00,1376.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 20:00:00,2026-11-12 21:00:00,1376.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 21:00:00,2026-11-12 22:00:00,1395.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 22:00:00,2026-11-12 23:00:00,1395.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-12 23:00:00,2026-11-13 00:00:00,1515.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 00:00:00,2026-11-13 01:00:00,1515.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 01:00:00,2026-11-13 02:00:00,1682.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 02:00:00,2026-11-13 03:00:00,1682.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 03:00:00,2026-11-13 04:00:00,1666.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 04:00:00,2026-11-13 05:00:00,1666.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 05:00:00,2026-11-13 06:00:00,1590.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 06:00:00,2026-11-13 07:00:00,1590.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 07:00:00,2026-11-13 08:00:00,1554.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 08:00:00,2026-11-13 09:00:00,1554.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 09:00:00,2026-11-13 10:00:00,1567.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 10:00:00,2026-11-13 11:00:00,1567.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 11:00:00,2026-11-13 12:00:00,1517.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 12:00:00,2026-11-13 13:00:00,1517.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 13:00:00,2026-11-13 14:00:00,1600.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 14:00:00,2026-11-13 15:00:00,1600.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 15:00:00,2026-11-13 16:00:00,1545.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 16:00:00,2026-11-13 17:00:00,1545.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 17:00:00,2026-11-13 18:00:00,1525.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 18:00:00,2026-11-13 19:00:00,1525.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 19:00:00,2026-11-13 20:00:00,1628.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 20:00:00,2026-11-13 21:00:00,1628.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 21:00:00,2026-11-13 22:00:00,1543.0
+IT Sicilia -> IT Calabria,IT Sicilia,IT Calabria,2026-11-13 22:00:00,2026-11-13 23:00:00,1543.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-11 23:00:00,2026-11-12 00:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 00:00:00,2026-11-12 01:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 01:00:00,2026-11-12 02:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 02:00:00,2026-11-12 03:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 03:00:00,2026-11-12 04:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 04:00:00,2026-11-12 05:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 05:00:00,2026-11-12 06:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 06:00:00,2026-11-12 07:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 07:00:00,2026-11-12 08:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 08:00:00,2026-11-12 09:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 09:00:00,2026-11-12 10:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 10:00:00,2026-11-12 11:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 11:00:00,2026-11-12 12:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 12:00:00,2026-11-12 13:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 13:00:00,2026-11-12 14:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 14:00:00,2026-11-12 15:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 15:00:00,2026-11-12 16:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 16:00:00,2026-11-12 17:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 17:00:00,2026-11-12 18:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 18:00:00,2026-11-12 19:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 19:00:00,2026-11-12 20:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 20:00:00,2026-11-12 21:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 21:00:00,2026-11-12 22:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 22:00:00,2026-11-12 23:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-12 23:00:00,2026-11-13 00:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 00:00:00,2026-11-13 01:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 01:00:00,2026-11-13 02:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 02:00:00,2026-11-13 03:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 03:00:00,2026-11-13 04:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 04:00:00,2026-11-13 05:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 05:00:00,2026-11-13 06:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 06:00:00,2026-11-13 07:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 07:00:00,2026-11-13 08:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 08:00:00,2026-11-13 09:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 09:00:00,2026-11-13 10:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 10:00:00,2026-11-13 11:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 11:00:00,2026-11-13 12:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 12:00:00,2026-11-13 13:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 13:00:00,2026-11-13 14:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 14:00:00,2026-11-13 15:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 15:00:00,2026-11-13 16:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 16:00:00,2026-11-13 17:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 17:00:00,2026-11-13 18:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 18:00:00,2026-11-13 19:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 19:00:00,2026-11-13 20:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 20:00:00,2026-11-13 21:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 21:00:00,2026-11-13 22:00:00,225.0
+IT Sicilia -> Malta,IT Sicilia,Malta,2026-11-13 22:00:00,2026-11-13 23:00:00,225.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-11 23:00:00,2026-11-12 00:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 00:00:00,2026-11-12 01:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 01:00:00,2026-11-12 02:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 02:00:00,2026-11-12 03:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 03:00:00,2026-11-12 04:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 04:00:00,2026-11-12 05:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 05:00:00,2026-11-12 06:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 06:00:00,2026-11-12 07:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 07:00:00,2026-11-12 08:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 08:00:00,2026-11-12 09:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 09:00:00,2026-11-12 10:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 10:00:00,2026-11-12 11:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 11:00:00,2026-11-12 12:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 12:00:00,2026-11-12 13:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 13:00:00,2026-11-12 14:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 14:00:00,2026-11-12 15:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 15:00:00,2026-11-12 16:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 16:00:00,2026-11-12 17:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 17:00:00,2026-11-12 18:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 18:00:00,2026-11-12 19:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 19:00:00,2026-11-12 20:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 20:00:00,2026-11-12 21:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 21:00:00,2026-11-12 22:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 22:00:00,2026-11-12 23:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-12 23:00:00,2026-11-13 00:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 00:00:00,2026-11-13 01:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 01:00:00,2026-11-13 02:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 02:00:00,2026-11-13 03:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 03:00:00,2026-11-13 04:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 04:00:00,2026-11-13 05:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 05:00:00,2026-11-13 06:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 06:00:00,2026-11-13 07:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 07:00:00,2026-11-13 08:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 08:00:00,2026-11-13 09:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 09:00:00,2026-11-13 10:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 10:00:00,2026-11-13 11:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 11:00:00,2026-11-13 12:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 12:00:00,2026-11-13 13:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 13:00:00,2026-11-13 14:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 14:00:00,2026-11-13 15:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 15:00:00,2026-11-13 16:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 16:00:00,2026-11-13 17:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 17:00:00,2026-11-13 18:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 18:00:00,2026-11-13 19:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 19:00:00,2026-11-13 20:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 20:00:00,2026-11-13 21:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 21:00:00,2026-11-13 22:00:00,10000.0
+IT Sud -> Grecia,IT Sud,Grecia,2026-11-13 22:00:00,2026-11-13 23:00:00,10000.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-11 23:00:00,2026-11-12 00:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 00:00:00,2026-11-12 01:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 01:00:00,2026-11-12 02:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 02:00:00,2026-11-12 03:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 03:00:00,2026-11-12 04:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 04:00:00,2026-11-12 05:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 05:00:00,2026-11-12 06:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 06:00:00,2026-11-12 07:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 07:00:00,2026-11-12 08:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 08:00:00,2026-11-12 09:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 09:00:00,2026-11-12 10:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 10:00:00,2026-11-12 11:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 11:00:00,2026-11-12 12:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 12:00:00,2026-11-12 13:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 13:00:00,2026-11-12 14:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 14:00:00,2026-11-12 15:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 15:00:00,2026-11-12 16:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 16:00:00,2026-11-12 17:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 17:00:00,2026-11-12 18:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 18:00:00,2026-11-12 19:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 19:00:00,2026-11-12 20:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 20:00:00,2026-11-12 21:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 21:00:00,2026-11-12 22:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 22:00:00,2026-11-12 23:00:00,0.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-12 23:00:00,2026-11-13 00:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 00:00:00,2026-11-13 01:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 01:00:00,2026-11-13 02:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 02:00:00,2026-11-13 03:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 03:00:00,2026-11-13 04:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 04:00:00,2026-11-13 05:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 05:00:00,2026-11-13 06:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 06:00:00,2026-11-13 07:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 07:00:00,2026-11-13 08:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 08:00:00,2026-11-13 09:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 09:00:00,2026-11-13 10:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 10:00:00,2026-11-13 11:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 11:00:00,2026-11-13 12:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 12:00:00,2026-11-13 13:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 13:00:00,2026-11-13 14:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 14:00:00,2026-11-13 15:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 15:00:00,2026-11-13 16:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 16:00:00,2026-11-13 17:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 17:00:00,2026-11-13 18:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 18:00:00,2026-11-13 19:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 19:00:00,2026-11-13 20:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 20:00:00,2026-11-13 21:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 21:00:00,2026-11-13 22:00:00,250.0
+IT Sud -> Grecia (XGRE),IT Sud,Grecia (XGRE),2026-11-13 22:00:00,2026-11-13 23:00:00,250.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-11 23:00:00,2026-11-12 00:00:00,278.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 00:00:00,2026-11-12 01:00:00,278.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 01:00:00,2026-11-12 02:00:00,287.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 02:00:00,2026-11-12 03:00:00,287.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 03:00:00,2026-11-12 04:00:00,290.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 04:00:00,2026-11-12 05:00:00,290.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 05:00:00,2026-11-12 06:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 06:00:00,2026-11-12 07:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 07:00:00,2026-11-12 08:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 08:00:00,2026-11-12 09:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 09:00:00,2026-11-12 10:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 10:00:00,2026-11-12 11:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 11:00:00,2026-11-12 12:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 12:00:00,2026-11-12 13:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 13:00:00,2026-11-12 14:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 14:00:00,2026-11-12 15:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 15:00:00,2026-11-12 16:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 16:00:00,2026-11-12 17:00:00,292.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 17:00:00,2026-11-12 18:00:00,292.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 18:00:00,2026-11-12 19:00:00,291.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 19:00:00,2026-11-12 20:00:00,295.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 20:00:00,2026-11-12 21:00:00,295.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 21:00:00,2026-11-12 22:00:00,331.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 22:00:00,2026-11-12 23:00:00,331.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-12 23:00:00,2026-11-13 00:00:00,343.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 00:00:00,2026-11-13 01:00:00,343.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 01:00:00,2026-11-13 02:00:00,325.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 02:00:00,2026-11-13 03:00:00,325.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 03:00:00,2026-11-13 04:00:00,306.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 04:00:00,2026-11-13 05:00:00,306.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 05:00:00,2026-11-13 06:00:00,303.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 06:00:00,2026-11-13 07:00:00,303.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 07:00:00,2026-11-13 08:00:00,303.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 08:00:00,2026-11-13 09:00:00,303.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 09:00:00,2026-11-13 10:00:00,394.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 10:00:00,2026-11-13 11:00:00,394.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 11:00:00,2026-11-13 12:00:00,310.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 12:00:00,2026-11-13 13:00:00,310.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 13:00:00,2026-11-13 14:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 14:00:00,2026-11-13 15:00:00,100.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 15:00:00,2026-11-13 16:00:00,292.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 16:00:00,2026-11-13 17:00:00,292.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 17:00:00,2026-11-13 18:00:00,294.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 18:00:00,2026-11-13 19:00:00,294.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 19:00:00,2026-11-13 20:00:00,294.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 20:00:00,2026-11-13 21:00:00,294.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 21:00:00,2026-11-13 22:00:00,300.0
+IT Sud -> IT Calabria,IT Sud,IT Calabria,2026-11-13 22:00:00,2026-11-13 23:00:00,300.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-11 23:00:00,2026-11-12 00:00:00,4651.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 00:00:00,2026-11-12 01:00:00,4651.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 01:00:00,2026-11-12 02:00:00,4482.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 02:00:00,2026-11-12 03:00:00,4482.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 03:00:00,2026-11-12 04:00:00,4482.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 04:00:00,2026-11-12 05:00:00,4482.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 05:00:00,2026-11-12 06:00:00,4217.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 06:00:00,2026-11-12 07:00:00,4217.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 07:00:00,2026-11-12 08:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 08:00:00,2026-11-12 09:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 09:00:00,2026-11-12 10:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 10:00:00,2026-11-12 11:00:00,2600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 11:00:00,2026-11-12 12:00:00,2600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 12:00:00,2026-11-12 13:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 13:00:00,2026-11-12 14:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 14:00:00,2026-11-12 15:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 15:00:00,2026-11-12 16:00:00,3400.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 16:00:00,2026-11-12 17:00:00,3600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 17:00:00,2026-11-12 18:00:00,3600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 18:00:00,2026-11-12 19:00:00,3400.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 19:00:00,2026-11-12 20:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 20:00:00,2026-11-12 21:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 21:00:00,2026-11-12 22:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 22:00:00,2026-11-12 23:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-12 23:00:00,2026-11-13 00:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 00:00:00,2026-11-13 01:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 01:00:00,2026-11-13 02:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 02:00:00,2026-11-13 03:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 03:00:00,2026-11-13 04:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 04:00:00,2026-11-13 05:00:00,3400.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 05:00:00,2026-11-13 06:00:00,3400.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 06:00:00,2026-11-13 07:00:00,3400.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 07:00:00,2026-11-13 08:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 08:00:00,2026-11-13 09:00:00,2600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 09:00:00,2026-11-13 10:00:00,2600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 10:00:00,2026-11-13 11:00:00,2600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 11:00:00,2026-11-13 12:00:00,2600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 12:00:00,2026-11-13 13:00:00,2600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 13:00:00,2026-11-13 14:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 14:00:00,2026-11-13 15:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 15:00:00,2026-11-13 16:00:00,3600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 16:00:00,2026-11-13 17:00:00,3600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 17:00:00,2026-11-13 18:00:00,3600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 18:00:00,2026-11-13 19:00:00,3600.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 19:00:00,2026-11-13 20:00:00,3400.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 20:00:00,2026-11-13 21:00:00,3400.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 21:00:00,2026-11-13 22:00:00,3000.0
+IT Sud -> IT Centro-Sud,IT Sud,IT Centro-Sud,2026-11-13 22:00:00,2026-11-13 23:00:00,3000.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-11 23:00:00,2026-11-12 00:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 00:00:00,2026-11-12 01:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 01:00:00,2026-11-12 02:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 02:00:00,2026-11-12 03:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 03:00:00,2026-11-12 04:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 04:00:00,2026-11-12 05:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 05:00:00,2026-11-12 06:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 06:00:00,2026-11-12 07:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 07:00:00,2026-11-12 08:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 08:00:00,2026-11-12 09:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 09:00:00,2026-11-12 10:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 10:00:00,2026-11-12 11:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 11:00:00,2026-11-12 12:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 12:00:00,2026-11-12 13:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 13:00:00,2026-11-12 14:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 14:00:00,2026-11-12 15:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 15:00:00,2026-11-12 16:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 16:00:00,2026-11-12 17:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 17:00:00,2026-11-12 18:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 18:00:00,2026-11-12 19:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 19:00:00,2026-11-12 20:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 20:00:00,2026-11-12 21:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 21:00:00,2026-11-12 22:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 22:00:00,2026-11-12 23:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-12 23:00:00,2026-11-13 00:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 00:00:00,2026-11-13 01:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 01:00:00,2026-11-13 02:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 02:00:00,2026-11-13 03:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 03:00:00,2026-11-13 04:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 04:00:00,2026-11-13 05:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 05:00:00,2026-11-13 06:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 06:00:00,2026-11-13 07:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 07:00:00,2026-11-13 08:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 08:00:00,2026-11-13 09:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 09:00:00,2026-11-13 10:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 10:00:00,2026-11-13 11:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 11:00:00,2026-11-13 12:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 12:00:00,2026-11-13 13:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 13:00:00,2026-11-13 14:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 14:00:00,2026-11-13 15:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 15:00:00,2026-11-13 16:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 16:00:00,2026-11-13 17:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 17:00:00,2026-11-13 18:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 18:00:00,2026-11-13 19:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 19:00:00,2026-11-13 20:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 20:00:00,2026-11-13 21:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 21:00:00,2026-11-13 22:00:00,225.0
+Malta -> IT Sicilia,Malta,IT Sicilia,2026-11-13 22:00:00,2026-11-13 23:00:00,225.0
