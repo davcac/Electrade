@@ -1,0 +1,22 @@
+{
+  "riepilogo": {
+    "zona": "Sud",
+    "fonte": "solare A75",
+    "intervalli": 192,
+    "inizio_utc": "2026-11-11T23:00:00+00:00",
+    "fine_utc_esclusa": "2026-11-13T23:00:00+00:00",
+    "prezzo_medio_aritmetico_15min_eur_mwh": 194.45916630208333,
+    "prezzo_medio_ponderato_sulla_produzione_eur_mwh": 85.53609357979236,
+    "differenza_ponderato_meno_aritmetico_eur_mwh": -108.92307272229097,
+    "differenza_percentuale": -56.0133393522237,
+    "energia_solare_mwh": 15820.75,
+    "valore_teorico_eur": 1353245.1525025,
+    "energia_solare_a_prezzo_esattamente_zero_mwh": 9020.25,
+    "quota_energia_a_prezzo_zero_percento": 57.015312169144956,
+    "intervalli_prezzo_zero": 23,
+    "intervalli_prezzo_negativo": 0,
+    "definizione_media": "media aritmetica temporale dei 192 prezzi quartorari",
+    "definizione_ponderata": "sum(prezzo_qh * energia_solare_qh) / sum(energia_solare_qh)",
+    "nota": "Stima descrittiva ex-post; non è un ricavo contrattuale né un settlement MGP."
+  }
+}

@@ -1,2 +1,8 @@
 __pycache__/
 *.pyc
+
+# Presentazioni PowerPoint (file binari pesanti, non versionabili)
+/Presentazione_Electrade_*.pptx
+
+# Script di aggiornamento presentazione (eseguibili locali)
+/aggiorna_presentazione*.py

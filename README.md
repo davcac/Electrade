@@ -39,3 +39,18 @@ Per ripetere il calcolo sul valore della produzione, consulta `slide_7_valore_pr
 - `backup_workflow/prima_del_nuovo_master_2026-11-22/` conserva il vecchio master, la vecchia versione aggiornata e i file del flusso precedente. Il manifest riporta le impronte dei file salvati.
 
 Per le prossime modifiche usa sempre il master nella cartella principale.
+
+## Versione a 15 minuti
+
+- `Presentazione_Electrade_MASTER - 15 min.pptx`: sorgente della variante quartoraria.
+- `Presentazione_Electrade_AGGIORNATA - 15 min.pptx`: output rigenerabile; non modificarlo a mano.
+
+La slide Domanda/Offerta (periodo 38) è collocata prima della slide sulla produzione; lo script mantiene quest'ordine e aggiorna i numeri pagina anche quando rigenera l'output.
+
+Per produrre o rigenerare l'output, dalla cartella del progetto esegui:
+
+```powershell
+python aggiorna_presentazione_15min.py
+```
+
+Lo script parte sempre dal MASTER a 15 minuti, mantiene testi, commenti, titoli, formattazione e impaginazione modificati a mano, aggiorna le immagini e i dati dei due grafici nativi con gli input quartorari, poi scrive il file AGGIORNATA distinto. Non sovrascrive il MASTER a 15 minuti né il MASTER/AGGIORNATA orario. Richiede `python-pptx` e `pandas`, oltre ai PNG e CSV già generati nelle sottocartelle `slide_n/15 minuti`.
